@@ -1,52 +1,52 @@
-import fs from 'fs';
+import fs from 'fs'
 
 // Arithmetic operations
-let arithSum = 0;
+let arithSum = 0
 for (let i = 0; i < 100000000; i++) {
-    arithSum += i * 2;
+  arithSum += i * 2
 }
 
 // String concatenation
-let strConcat = '';
+let strConcat = ''
 for (let i = 0; i < 100000; i++) {
-    strConcat += "test";
+  strConcat += 'test'
 }
 
 // Array operations
-let arr = [];
+let arr = []
 for (let i = 0; i < 100000; i++) {
-    arr.push(i);
+  arr.push(i)
 }
-let arrSum = arr.reduce((acc, val) => acc + val, 0);
+let arrSum = arr.reduce((acc, val) => acc + val, 0)
 
 // Function calls
 function square(n) {
-    return n * n;
+  return n * n
 }
-let funcSum = 0;
+let funcSum = 0
 for (let i = 0; i < 1000000; i++) {
-    funcSum += square(i);
+  funcSum += square(i)
 }
 
 // File write and read 1000 times
 for (let j = 0; j < 1000; j++) {
-    fs.writeFileSync('test.txt', 'This is a test file.\n'.repeat(10000));
-    let fileContent = fs.readFileSync('test.txt', 'utf8');
+  fs.writeFileSync('test.txt', 'This is a test file.\n'.repeat(10000))
+  let fileContent = fs.readFileSync('test.txt', 'utf8')
 }
 
 // Sorting
-let unsortedArr = [];
+let unsortedArr = []
 for (let i = 0; i < 100000; i++) {
-    unsortedArr.push(Math.random());
+  unsortedArr.push(Math.random())
 }
-let sortedArr = unsortedArr.sort();
+let sortedArr = unsortedArr.sort()
 
 // Dictionary (object) operations
-let dict = {};
+let dict = {}
 for (let i = 0; i < 100000; i++) {
-    dict[`key${i}`] = i;
+  dict[`key${i}`] = i
 }
-let dictSum = 0;
+let dictSum = 0
 for (let key in dict) {
-    dictSum += dict[key];
+  dictSum += dict[key]
 }
